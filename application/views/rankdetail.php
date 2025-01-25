@@ -1,0 +1,253 @@
+<?php 
+date_default_timezone_set('Asia/Jakarta');
+setlocale(LC_ALL, 'id_ID');
+$tgl=date("Y-m-d");
+$date = strtotime($tgl);
+
+?>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<style>
+/* The Modal (background) */
+.modal {
+display: block;
+
+  float: left;
+  left: 50%;
+ top: 40%;
+  transform: translate(-50%, -50%);
+ overflow:hidden;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+
+  text-align:center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+	text-align:center;
+  background-color: #11cdef;
+  margin: 25% auto; /* 15% from the top and centered */
+  padding: 25px;
+  max-width: 1200px;
+     
+       
+  border: 1px solid #888;
+  width: 1200px; /* Could be more or less, depending on screen size */
+   animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  background-color: #11cdef;
+  color: white;
+}
+
+/* Modal Body */
+
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #11cdef;
+  color: white;
+}
+
+
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: blue;}
+ </style>
+ 
+ <div class="midde_cont" style="background-color:#11cdef;color:white">
+                  <div class="container-fluid">
+                     <div class="row column_title">
+                        <div class="col-md-12">
+                           <div class="page_title">
+                              <h2>List Rank</h2>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- dashboard inner -->
+               <div class="midde_cont">
+                  <div class="container-fluid">
+                  
+                     <!-- row -->
+                     <div class="row">
+                        <!-- table section -->
+                        <div class="col-md-12">
+                           <div class="white_shd full margin_bottom_30">
+                              <div class="full graph_head">
+                                 <div class="heading1 margin_0">
+                                    <h2>Rangking Karyawan
+                                 </div>
+                              </div>
+                              <div class="full inbox_inner_section">
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                       <div class="full padding_infor_info">
+                                          <div class="mail-box">
+                                             <aside class="sm-side" >
+                                                <div class="user-head" style="background-color:#11cdef;color:white">
+                                                   
+
+     
+         </div>                   
+                         </div>   
+						 			 
+	   <div id="myModal" class="modal">
+						 <div class="modal-content">
+ 
+ 
+
+  <div class="modal-header">
+    <span class="close">&times;</span>
+   
+   
+   
+  </div>
+  <div class="">
+  <main class="">
+    <section>
+      <div class="">
+        <div class="container">
+          <div class="row">
+            <div class="">
+              <div class="">
+                <div class="">
+                  <h4 class="font-weight-bolder" style="color:white;background:linear-gradient(to right, #1d86df 0%, #39b49a 100%);">nilai log entropy</h4>
+                  <p class="mb-0"></p>
+                </div>
+                <div class="card-body">
+
+ <div class="midde_cont" style="background-color:#11cdef;color:white">
+                  <div class="container-fluid">
+                     <div class="row column_title">
+                        <div class="col-md-12">
+                           <div class="page_title">
+                              <h2>List Rank</h2>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- dashboard inner -->
+               <div class="midde_cont">
+                  <div class="container-fluid">
+                  
+                     <!-- row -->
+                     <div class="row">
+                        <!-- table section -->
+                        <div class="col-md-12">
+                           <div class="white_shd full margin_bottom_30">
+                              <div class="full graph_head">
+                                 <div class="heading1 margin_0">
+								  <?php
+								  $no = 1;
+	?>
+                                    <h2>aspek Karyawan  <?=$ranks[0]->emp_name?>
+				
+                                 </div>
+                              </div>
+                              <div class="full inbox_inner_section">
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                       <div class="full padding_infor_info">
+                                          <div class="mail-box">
+                                             <aside class="sm-side" >
+                                                <div class="user-head" style="background-color:#11cdef;color:white">
+                                        <td colspan="2" style="width:15%">detail Jawaban<button type="button" class="btn btn-info btn-sm btn-detail" style="color:white;background-color:#e91e63"  data-name="<?=$ranks[0]->id_emp?>" data-id="<?=$ranks[0]->id_emp?>"  /> Detail</button></td>
+                 
+
+<table id="example"  class="table table-bordered" style="width:100%">
+        <thead >
+            <tr>
+			<th><b>nilai_log_entropy</b></th>
+                <th><b>nama_aspek</b></th>
+                <th><b>prediksi_aspek</b></th>
+				
+            </tr>
+        </thead>
+        <tbody>
+		<?php
+	$no = 1;
+   $sss=1;
+	foreach ($ranks as $b => $row) { 
+   $entropylog=$row->nilai_log_entropy * log($row->nilai_log_entropy, 2);
+   $sss += $row->nilai_log_entropy * log($row->nilai_log_entropy, 2); 
+   ?>
+            <tr>
+                <td><?=$entropylog?></td>
+                <td><?=$row->nama_aspek?></td>
+                <td><?=$row->prediksi_aspek?></td>
+               
+            </tr>
+           
+       <?php
+	}
+?>	
+<br>
+ <tr ><font color='yellow'>Entopry Total : <?=$sss?></font> <tr>
+        </tbody>
+     
+    </table>
+	<a href="<?=site_url('ranking');?>"><button class="btn btn-info" type="button">Kembali</button></a>
+			
+</div>
+
+  <div class="modal-footer">
+    
+			
+</div>			
+</div>
+<script>
+    $(document).ready(function(){
+     
+        // get Edit Product
+       
+            $('#myModal').modal('show');
+
+        
+        }
+  );
+
+  </script>\
+  <script>
+    $(document).ready(function(){
+     
+        // get Edit Product
+        $('.btn-detail').on('click',function(){
+          const id = $(this).data('id');
+            // get data from button edit
+            window.location.replace("https://quesioner.my.id/dinas/ranking/answerdetail/"+id);
+          
+
+        }
+        )}
+  );
+  </script>

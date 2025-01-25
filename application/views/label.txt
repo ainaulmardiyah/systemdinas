@@ -1,0 +1,63 @@
+  <ul class="nav nav-pills nav-stacked labels-category">
+                                                   <li style="background-color:#11cdef;color:white">
+                                                      <h4>Labels</h4>
+                                                   </li>
+                                                   <li style="background-color:#11cdef;color:white">
+                                                      <a href="#" style="background-color:#11cdef;color:white">
+                                                         <i class="fa fa-circle"></i> Family 
+                                                        
+                                                      </a>
+                                                   </li>
+                                                   <li style="background-color:#11cdef;color:white">
+                                                      <a href="#" style="background-color:#11cdef;color:white">
+                                                         <i class="fa fa-circle"></i> Work 
+                                                         
+                                                      </a>
+                                                   </li>
+                                                   <li style="background-color:#11cdef;color:white">
+                                                      <a href="#" style="background-color:#11cdef;color:white">
+                                                         <i class="fa fa-circle"></i> Home 
+                                                        
+                                                      </a>
+                                                   </li>
+                                                   <li style="background-color:#11cdef;color:white">
+                                                      <a href="#" style="background-color:#11cdef;color:white">
+                                                         <i class="fa fa-circle"></i> Children 
+                                                        
+                                                      </a>
+                                                   </li>
+                                                   <li style="background-color:#11cdef;color:white">
+                                                      <a href="#" style="background-color:#11cdef;color:white">
+                                                         <i class="fa fa-circle"></i> Holydays 
+                                                         
+                                                      </a>
+                                                   </li>
+                                                   <li style="background-color:#11cdef;color:white">
+                                                      <a href="#" style="background-color:#11cdef;color:white">
+                                                         <i class="fa fa-circle"></i> Music 
+                                                         
+                                                      </a>
+                                                   </li>
+                                                   <li style="background-color:#11cdef;color:white">
+                                                      <a href="#" style="background-color:#11cdef;color:white">
+                                                         <i class="fa fa-circle"></i> Photography 
+                                                        
+                                                      </a>
+                                                   </li>
+                                                   <li style="background-color:#11cdef;color:white">
+                                                      <a href="#" style="background-color:#11cdef;color:white">
+                                                         <i class="fa fa-circle"></i> Film 
+                                                         
+                                                      </a>
+                                                   </li>
+                                                </ul>
+												
+												    console.log(id);
+    $.ajax({
+            type:'POST',
+            url:"<?php echo site_url('cuti/labeling/'.$row->id_cuti);?>",
+            data:{'id':id},
+            success:function(data){
+            }
+        });
+		
